@@ -27,7 +27,9 @@ body{
     background-color: #7dabd4;
     overflow: hidden;
 }
-
+input{
+    display:none;
+}
 .slider{
     width : 100%;
     margin: auto;
@@ -49,13 +51,16 @@ img{
     grid-template-columns: repeat(4, 143%);
     grid-template-rows: 100%;
     vertical-align: bottom;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
+    overflow-wrap: anywhere;
 }
-input{
-    display: none;
+p{
+    overflow-wrap: break-word; 
+    width: fit-content; 
 }
+
 .controls{
     text-align: end;
     display: flex;
@@ -66,7 +71,7 @@ label {
     width: 1rem;
     height: 1rem;
     cursor: pointer;
-    background-color: yellow;
+    background-color: #d4bd28;
     border-radius: 50%;
  }
  .around{
@@ -75,21 +80,26 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
  }
  .around:hover label{
-    background-color: yellow;
-     border: 2px solid blue;
+    background-color: #d4bd28;
+     border: 2px solid #4865b8;
+     cursor: pointer;
  }
-
- #s1:checked ~ .slider  {
+.around:active label{
+    background-color: #4865b8;
+    border: 2px solid #d4bd28;
+}
+#s1:checked ~ .slider  {
     margin-left: 0;
  }
  
- #s2:checked ~ .slider  {
+#s2:checked ~ .slider  {
     margin-left: -100%;
  }
  
- #s3:checked ~ .slider  {
+#s3:checked ~ .slider  {
     margin-left: -200%;
  }
  
@@ -118,6 +128,25 @@ label {
 #s3:checked ~ .controls .around:nth-child(3) label,
 #s4:checked ~ .controls .around:nth-child(4) label
  {
-    background-color: blue;
-    border: 2px solid yellow;
+    background-color: #4865b8;
+}
+
+@media (max-width: 700px){
+    .text{
+        font-size: 1.4em;
+        grid-row: 3;
+    }
+    .slider{
+        order: 1;
+        margin-top: 5px;
+    }
+    .wraper{
+       grid-row-gap: 1rem;
+
+    } 
+    .controls{
+        justify-content: center;
+        grid-row: 2;
+        grid-column: span 2;
+    }
 }
