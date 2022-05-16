@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+body{
+    width: 80%;
+    height: 100vh;
+    margin : 0 auto;
+    background-color: #7dabd4;
+}
+
+.wraper{
+    margin : auto;
+    width : 95%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-row-gap: 30px;
+    background-color: #7dabd4;
+    border-radius: 30px;
+}
+
+.slider{
+    width : 100%;
+    margin: auto;
+    margin-top: 15px;
+    overflow: hidden;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(4, 100%);
+    grid-template-rows: 100%;
+    grid-column: span 2;
+}
+.img{
+    width: 100%;
+}
+img{
+    width: 100%;
+}
