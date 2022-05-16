@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    width: 80%;
+    width: 60%;
     height: 100%;
     margin : auto ;
     background-color: #7dabd4;
@@ -65,19 +65,20 @@ input{
 label {
     width: 1rem;
     height: 1rem;
-    margin: 6px;
     cursor: pointer;
     background-color: yellow;
     border-radius: 50%;
-    z-index: 2;
  }
- label:hover{
+ .around{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .around:hover label{
     background-color: yellow;
      border: 2px solid blue;
- }
- label:checked{
-    background-color: blue;
-    border: 2px solid yellow;
  }
 
  #s1:checked ~ .slider  {
@@ -111,3 +112,12 @@ label {
  #s4:checked ~ .text {
     margin-left: -429%;
  }
+
+#s1:checked ~ .controls .around:nth-child(1) label,
+#s2:checked ~ .controls .around:nth-child(2) label,
+#s3:checked ~ .controls .around:nth-child(3) label,
+#s4:checked ~ .controls .around:nth-child(4) label
+ {
+    background-color: blue;
+    border: 2px solid yellow;
+}
