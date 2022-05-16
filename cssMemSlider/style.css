@@ -38,6 +38,7 @@ input{
     grid-template-columns: repeat(4, 100%);
     grid-template-rows: 100%;
     grid-column: span 2;
+    transition: margin-left 800ms ease-in-out;
 }
 .img{
     width: 100%;
@@ -55,6 +56,7 @@ img{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     overflow-wrap: anywhere;
+    transition: margin-left 800ms ease-in-out;
 }
 p{
     overflow-wrap: break-word; 
@@ -65,7 +67,6 @@ p{
     text-align: end;
     display: flex;
     justify-content: end;
-
 }
 label {
     width: 1rem;
@@ -122,27 +123,23 @@ label {
  #s4:checked ~ .text {
     margin-left: -429%;
  }
-
 #s1:checked ~ .controls .around:nth-child(1) label,
 #s2:checked ~ .controls .around:nth-child(2) label,
 #s3:checked ~ .controls .around:nth-child(3) label,
-#s4:checked ~ .controls .around:nth-child(4) label
- {
+#s4:checked ~ .controls .around:nth-child(4) label {
     background-color: #4865b8;
 }
 
-@media (max-width: 700px){
+@media (max-width: 1280px){
     .text{
         font-size: 1.4em;
         grid-row: 3;
     }
     .slider{
-        order: 1;
         margin-top: 5px;
     }
     .wraper{
        grid-row-gap: 1rem;
-
     } 
     .controls{
         justify-content: center;
